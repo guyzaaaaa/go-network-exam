@@ -30,7 +30,7 @@ func Minus(a int, b int) int {
 }
 
 func UserLogin(username string, password string) bool {
-	if username == "admin" && password == "password" {
+	if username == "อ้ายโตะ" && password == "อ้ายราน" {
 		return true
 	} else {
 		return false
