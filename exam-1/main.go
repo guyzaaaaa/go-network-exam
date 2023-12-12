@@ -2,19 +2,25 @@ package main
 
 import "fmt"
 
-
 func main() {
 	// Got Username and Password from keyboard
 	var username string
 	var password string
-
+	
 	fmt.Print("Username: ")
 	fmt.Scanln(&username)
 	fmt.Print("Password: ")
 	fmt.Scanln(&password)
+	
 	// Call function LogIn
-
 	LogIn(username, password)
+	
+	// Call function Add and print the result
+	result := Add(4, 5)
+	fmt.Println("ผลบวกเท่ากับ:", result)
+
+	// Call function Minus and print the result
+	fmt.Print("ผลลบเท่ากับ:", Minus(3, 2))
 }
 
 func HelloFunction() string {
@@ -40,8 +46,8 @@ func UserLogin(username string, password string) bool {
 // Use function UserLogin
 func LogIn(username string, password string) {
 	if UserLogin(username, password) {
-		fmt.Println("Login successful")
+		fmt.Println("เข้าสู่ระบบสำเร็จ")
 	} else {
-		fmt.Println("Login failed")
+		fmt.Println("เข้าสู่ระบบผิดพลาด")
 	}
 }
